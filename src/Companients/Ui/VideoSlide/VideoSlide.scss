@@ -1,0 +1,44 @@
+.video{
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    color: white;
+    font-size: 20px;
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+    &_vid1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: 200px;
+        height: 200px;
+    }
+    &_vid2 img{
+        width: 320px;
+        height: 220px;
+        border-radius: 20px;
+    }
+    &_title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_title a{
+        text-decoration: none;
+        background-color: rgb(74, 142, 246);
+        color: wheat;
+        padding: 10px 20px;
+        border-radius: 12px;
+    }
+    &_vid1 img{
+        border-radius: 20px;
+        width: 320px;
+        height: 220px;
+    }
+    &_vid1 img:hover{
+        filter: brightness(80%);
+    }
+}

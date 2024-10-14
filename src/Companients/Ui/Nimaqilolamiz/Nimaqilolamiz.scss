@@ -1,0 +1,60 @@
+.nima{
+    width: 100%;
+    margin-top: 100px;
+    color: white;
+    background-color: bisque;
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+    &_title{
+        color: white;
+    }
+    &_items{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_box img{
+        width: 330px;
+        height: 220px;
+        border-radius: 10px;
+    }
+    &_box{
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+        font-size: 15px;
+        color: white;
+    }
+    &_boxtit{
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        background-color: rgb(18, 38, 40);
+        padding: 10px 20px;
+    }
+    &_boxtit p{
+        color: rgb(188, 187, 186);
+    }
+    &_boxtit button{
+        outline: none;
+        padding: 10px 30px;
+        border-radius: 10px;
+        border: 1px solid rgb(93, 125, 229);
+        color: rgb(93, 125, 229);
+        background-color: rgb(26, 43, 44);
+        font-size: 18px;
+    }
+    &_boxtit button:hover{
+        cursor: pointer;
+        background-color: rgb(46, 58, 58);
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+.niam{
+    background-color: rgb(47, 52, 52);
+    padding: 50px 0 100px 0;
+}
