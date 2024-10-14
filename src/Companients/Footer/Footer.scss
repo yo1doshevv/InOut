@@ -1,0 +1,41 @@
+.footer{
+    width: 100%;
+    color: white;
+    background-color :rgb(3,22,29);
+    font-size: 18px;
+    margin-top: 44vh;
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_tel{
+        display: flex;
+        gap: 20px;
+    }
+    &_imgs img{
+       margin-left: 10px;
+    }
+    &_ijtimoiy p{
+      position: relative;
+      left: 15px;
+    }
+    &_loc{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_data{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-right: 20px;
+    }
+    &_img img{
+        width: 80px;
+        height: 80px;
+    }
+}

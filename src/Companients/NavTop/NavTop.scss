@@ -1,0 +1,58 @@
+.navtop{
+    width: 100%;
+    background-color :rgb(3,22,29);
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    &_language{
+        width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        position: relative;
+        top: 15px;
+        font-weight: 600;
+    }
+    &_language:hover{
+        cursor: pointer;
+    }
+    &_language p{
+        position: relative;
+        top: -10px;
+    }
+    &_button{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: -300px;
+    }
+    &_button p{
+        position: relative;
+        left: 50px;
+    }
+    &_button a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        padding:10px 20px 10px 60px;
+        background-color :rgb(53, 64, 71);
+        font-weight: 500;
+        font-size: 17px;
+    }
+    &_img img{
+        width: 70px;
+        height: 70px;
+    }
+    &_en img{
+        width: 27px;
+        height: 27px;
+    }
+}
