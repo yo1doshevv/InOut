@@ -17,22 +17,46 @@
         justify-content: space-between;
         gap: 30px;
     }
+    &_nav a:hover{
+        color: #55a8ec;
+        transition: 0.5s ease-in-out;
+        font-size: 18.0.9px;
+    }
     &_nav a{
         text-decoration: none;
         color: white;
         font-size: 18px;
         font-weight: 500;
     }
+
     &_input{
         display: flex;
         align-items: center;
         position: relative;
         left: -80px;
+       
+    }
+    @keyframes float{
+        0%{
+            transform: translateX(0);
+            background-color:  rgb(70, 80, 84);
+            box-shadow: 0 0 5px rgb(70, 80, 84);
+        }
+        50%{
+            transform: translateX(50);
+            background-color: #55a8ec;
+        }
+        100%{
+            transform: translateX(0);
+            background-color: rgb(70, 80, 84);
+            box-shadow: 0 0 5px rgb(70, 80, 84);
+                }
     }
     &_input p{
         position: relative;
         left: 35px;
         top: 1px;
+        z-index: 6;
     }
     &_input input{
         padding: 15px 15px 15px 50px;
@@ -41,6 +65,7 @@
         outline: none;
         background-color: rgb(70, 80, 84);
         color: rgb(255, 255, 255);
+        animation: float 3s linear infinite;
 
     }
     &_time{

@@ -4,8 +4,9 @@ import "./VideoSlide.scss";
 
 const VideoSlide = () => {
   const settings2 = {
-    dots: true,
+    dots: false,
     infinite: true,
+    arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     speed: 1000,

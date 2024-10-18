@@ -1,0 +1,40 @@
+.jamoa{
+    width: 100%;
+    color: white;
+    margin-top: 80px;
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+    &_title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       font-size: 20px;
+    }
+    &_title p{
+        color: #c1c0c0;
+        margin-top: -15px;
+        margin-bottom: 50px;
+    }
+    &_right a{
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #3c88e5;
+        padding: 15px 20px;
+        border-radius: 10px;
+    }
+    // &_cards{
+    //     display: flex;
+    //     align-items: center;
+    //     // gap: 10px;
+    // }
+    &_box{
+        display: flex;
+    }
+    &_cards{
+        border: 1px solid;
+        width: 300px ;
+        height: 500px;
+    }
+}

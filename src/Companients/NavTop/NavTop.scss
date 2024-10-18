@@ -36,6 +36,23 @@
         position: relative;
         left: 50px;
     }
+    @keyframes foat{
+        0%{
+            transform: translateX(0);
+            background-color: rgb(80, 147, 214);
+            box-shadow: 0 0 5px rgb(80, 147, 214);
+        }
+        50%{
+            transform: translateX(50);
+            background-color: rgb(27, 116, 206);
+            box-shadow: 0 0 5px rgb(18, 111, 204);
+        }
+        100%{
+            transform: translateX(0);
+            background-color: rgb(72, 152, 233);
+            box-shadow: 0 0 5px rgb(80, 147, 214);
+                }
+    }
     &_button a{
         text-decoration: none;
         color: rgb(255, 255, 255);
@@ -46,6 +63,7 @@
         background-color :rgb(53, 64, 71);
         font-weight: 500;
         font-size: 17px;
+        
     }
     &_img img{
         width: 70px;

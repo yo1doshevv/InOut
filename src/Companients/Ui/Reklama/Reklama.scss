@@ -2,7 +2,7 @@
     width: 100%;
     margin-bottom: 250px;
     color: white;
-    font-size: 25px;
+    font-size: 23px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   
     &_wrapper {
@@ -29,13 +29,22 @@
       height: 35%;
     }
   
+    &_right{
+      width: 480px;
+      height: 400px;
+      // margin-left: -50px;
+    }
     &_right img {
       width: 500px;
       height: 350px;
+      
       border-radius: 27px;
       position: relative;
       top: 30px;
       transition: filter 0.3s ease; /* Sekin-asta o'zgarish efekti */
+      overflow: hidden; /* Rasmning border-radius qiymatini saqlash uchun */
+      border-radius: 28px;
+     
     }
   
     &_right img:hover {
@@ -62,3 +71,10 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
   
+  .slic img{
+    overflow: hidden; /* Rasmning border-radius qiymatini saqlash uchun */
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid;
+  }

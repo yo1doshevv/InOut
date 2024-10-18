@@ -1,0 +1,76 @@
+.num1{
+    width: 100%;
+    color: white;
+    margin-top: 100px;
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        gap: 40px;
+    }
+    &_span{
+        color: #1877dd;
+    }
+    &_cunter{
+        width: 50%;
+        height: 535px;
+        padding: 30px 30px 60px 30px;
+        border-radius: 20px;
+        background-color: rgb(38, 46, 47);
+        font-size: 25px;
+        
+    }
+    &_coup{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+    &_box{
+        width: 210px;
+        margin-top: -40px;
+    }
+    &_box p{
+        margin-top: -15px;
+        color: rgb(214, 212, 212);
+        font-weight: 500;
+    }
+    &_box h1{
+        font-size: 50px;
+        font-weight: 900;
+    }
+    &_hed{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_hed button{
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 17px;
+        background-color: rgb(50, 129, 172);
+        color: white;
+    }
+}
+.image-container {
+    border-radius: 20px;
+    width: 600px; /* Konteyner kengligi */
+    height: 620px; /* Konteyner balandligi */
+    overflow: hidden; /* Rasm konteyneridan chiqmasligi uchun */
+    position: relative;
+  }
+  
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Kattalashish animatsiyasi */
+  }
+  
+  .image-container:hover img {
+    cursor: pointer;
+    transform: scale(1.2); /* Rasm 1.2 marta kattalashadi */
+  }
+  

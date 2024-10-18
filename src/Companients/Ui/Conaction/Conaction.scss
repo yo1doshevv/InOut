@@ -31,6 +31,7 @@
         padding: 15px 20px;
         border-radius: 10px;
         font-size: 17px;
+        color: white;
     }
     &_right img{
         width: 60%;
@@ -61,5 +62,9 @@
         font-size: 18px;
         margin-left: 330px;
         margin-top: 25px;
+    }
+    &_btn:hover{
+        cursor: pointer;
+        filter: brightness(70%);
     }
 }

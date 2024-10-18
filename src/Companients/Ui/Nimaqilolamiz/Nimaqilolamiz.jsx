@@ -19,8 +19,7 @@ const Nimaqilolamiz = () => {
               <p>
                 Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
                 Saepe asperiores exercitationem <br />
-                nihil vero amet maxime perferendis, corporis <br /> nostrum
-                obcaecati!
+                
               </p>
 
               <button>Koproq</button>
@@ -36,8 +35,7 @@ const Nimaqilolamiz = () => {
               <p>
                 Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
                 Saepe asperiores exercitationem <br />
-                nihil vero amet maxime perferendis, corporis <br /> nostrum
-                obcaecati!
+                
               </p>
               <button>Koproq</button>
             </div>
@@ -74,6 +72,7 @@ const Nimaqilolamiz = () => {
               <button>Koproq</button>
             </div>
           </div> */}
+          
         </div>
       </div>
     </div>

@@ -5,7 +5,8 @@ import Slider from "react-slick";
 
 const Reklama = () => {
   const settings2 = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -43,12 +44,13 @@ const Reklama = () => {
           <Slider {...settings2}>
             <div className="reklama_right">
               <img
+              className="slic"
                 src="https://kirdchiqdi.netlify.app/assets/hog-Zfj9bul5.jpeg"
                 alt=""
               />
             </div>
             <div className="reklama_right">
-              <img
+              <img className="slic"
                 src="https://admin.inoutads.uz/uploads/images/video/1/preview-64d70ef7e76b7.jpg"
                 alt=""
               />
