@@ -1,6 +1,7 @@
-.con{
+.con {
     width: 100%;
-    &_wrapper{
+
+    &_wrapper {
         width: 80%;
         height: 720px;
         margin: 0 auto;
@@ -8,50 +9,93 @@
         padding: 40px 50px;
         border-radius: 40px;
         margin-top: 100px;
+
+        @media (max-width: 1200px) {
+            width: 90%; /* Adjust width for medium screens */
+        }
+
+        @media (max-width: 768px) {
+            width: 100%; /* Full width for small screens */
+            height: auto; /* Allow height to be dynamic */
+            padding: 20px; /* Reduce padding for smaller screens */
+        }
     }
-    &_left{
+
+    &_left {
         display: flex;
         flex-direction: column;
         color: white;
+        width: 100%; /* Ensure it takes full width */
+
+        @media (max-width: 768px) {
+            align-items: center; /* Center content for smaller screens */
+        }
     }
-    &_form{
+
+    &_form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 10px;
         color: rgb(196, 195, 195);
         font-size: 18px;
-        width: 40%;
+        width: 40%; /* Adjust as needed */
+
+        @media (max-width: 768px) {
+            width: 100%; /* Full width for smaller screens */
+        }
     }
-    &_form input{
+
+    &_form input {
         margin-bottom: 20px;
         border: 3px solid rgb(141, 141, 144);
-        background-color: rgb(3,22,25);
+        background-color: rgb(3, 22, 25);
         outline: none;
         padding: 15px 20px;
         border-radius: 10px;
         font-size: 17px;
         color: white;
+
+        @media (max-width: 768px) {
+            padding: 10px 15px; /* Adjust padding for smaller screens */
+            font-size: 16px; /* Adjust font size */
+        }
     }
-    &_right img{
+
+    &_right img {
         width: 720px;
         height: 720px;
         margin-left: 537px;
         margin-top: -760px;
         border-radius: 20px;
+
+        @media (max-width: 768px) {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin-left: 0; /* Reset margin */
+            margin-top: 0; /* Reset margin */
+        }
     }
-    textarea{
+
+    textarea {
         resize: none;
         height: 150px;
         border: 3px solid rgb(140, 140, 142);
-        background-color: rgb(3,22,25);
+        background-color: rgb(3, 22, 25);
         color: rgb(135, 132, 132);
         outline: none;
         padding: 10px 10px;
         border-radius: 10px;
         font-size: 17px;
+
+        @media (max-width: 768px) {
+            height: 100px; /* Adjust height for smaller screens */
+            padding: 8px; /* Adjust padding for smaller screens */
+            font-size: 16px; /* Adjust font size */
+        }
     }
-    &_btn{
+
+    &_btn {
         width: 150px;
         outline: none;
         border: none;
@@ -62,8 +106,15 @@
         font-size: 18px;
         margin-left: 330px;
         margin-top: 25px;
+
+        @media (max-width: 768px) {
+            width: 100%; /* Make button full width on smaller screens */
+            margin-left: 0; /* Reset margin */
+            margin-top: 15px; /* Adjust margin */
+        }
     }
-    &_btn:hover{
+
+    &_btn:hover {
         cursor: pointer;
         background-color: inherit;
         border: 0.1px solid rgb(24, 125, 226);

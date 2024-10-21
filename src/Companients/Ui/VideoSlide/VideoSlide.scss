@@ -1,50 +1,84 @@
-.video{
+.video {
     width: 100%;
     margin-top: 70px;
     margin-bottom: 70px;
     color: white;
     font-size: 20px;
-    &_wrapper{
-        width: 90%;
-        margin: 0 auto;
+  
+    &_wrapper {
+      width: 90%;
+      margin: 0 auto;
     }
-    &_vid1{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        width: 200px;
+  
+    &_vid1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      height: auto;
+  
+      @media (max-width: 768px) {
+        flex-direction: column; /* Stack videos vertically on tablets */
+        gap: 15px; /* Increase gap for better spacing */
+      }
+  
+      @media (max-width: 480px) {
+        gap: 10px; /* Reduce gap for mobile screens */
+      }
+    }
+  
+    &_vid2 img,
+    &_vid1 img {
+      width: 320px;
+      height: 220px;
+      border-radius: 20px;
+  
+      @media (max-width: 768px) {
+        width: 280px; /* Adjust image size for tablets */
         height: 200px;
+      }
+  
+      @media (max-width: 480px) {
+        width: 240px; /* Further reduce image size for mobile devices */
+        height: 180px;
+      }
     }
-    &_vid2 img{
-        width: 320px;
-        height: 220px;
-        border-radius: 20px;
+  
+    &_vid1 img:hover,
+    &_vid2 img:hover {
+      filter: brightness(80%);
     }
-    &_title{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  
+    &_title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  
+      @media (max-width: 768px) {
+        justify-content: center; /* Center align for tablets */
+      }
     }
-    &_title a{
-        text-decoration: none;
-        background-color: rgb(24, 125, 226);
-        color: wheat;
-        padding: 10px 20px;
-        border-radius: 12px;
+  
+    &_title a {
+      text-decoration: none;
+      background-color: rgb(24, 125, 226);
+      color: wheat;
+      padding: 10px 20px;
+      border-radius: 12px;
+  
+      @media (max-width: 480px) {
+        padding: 8px 15px; /* Reduce padding for mobile devices */
+        font-size: 18px; /* Adjust font size */
+      }
     }
-    &_title a:hover{
-        cursor: pointer;
-        background-color: inherit;
-        border: 2px solid rgb(24, 125, 226);
-        color: rgb(24, 125, 226);
+  
+    &_title a:hover {
+      cursor: pointer;
+      background-color: inherit;
+      border: 2px solid rgb(24, 125, 226);
+      color: rgb(24, 125, 226);
     }
-    &_vid1 img{
-        border-radius: 20px;
-        width: 320px;
-        height: 220px;
-    }
-    &_vid1 img:hover{
-        filter: brightness(80%);
-    }
-}
+  }
+  

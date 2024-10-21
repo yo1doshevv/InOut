@@ -1,8 +1,9 @@
-.haqi{
+.haqi {
     width: 100%;
     color: #ffffff;
     margin-top: 100px;
-    &_wrapper{
+
+    &_wrapper {
         width: 90%;
         margin: 0 auto;
         display: flex;
@@ -10,62 +11,96 @@
         justify-content: center;
         align-items: center;
         gap: 32px;
+
+        @media (max-width: 768px) {
+            width: 95%; /* Adjust for smaller screens */
+            gap: 20px; /* Reduce gap for smaller screens */
+        }
     }
-    &_btn a{
+
+    &_btn a {
         text-decoration: none;
         color: red;
         font-size: 18px;
+
+        @media (max-width: 768px) {
+            font-size: 16px; /* Adjust font size for smaller screens */
+        }
     }
-    &_btn{
+
+    &_btn {
         width: 200px;
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-left: -200px;
+        margin-left: -200px; /* Adjust based on layout needs */
         position: relative;
         top: 40px;
+
+        @media (max-width: 768px) {
+            margin-left: 0; /* Reset margin for smaller screens */
+            flex-direction: column; /* Stack elements vertically */
+            top: 20px; /* Adjust position */
+        }
     }
-    &_btn a:hover{
+
+    &_btn a:hover {
         font-size: 19px;
     }
-    &_count{
+
+    &_count {
         width: 50%;
         height: 535px;
-        padding: 30px 30px 60px 30px;
+        padding: 30px;
         border-radius: 20px;
         background-color: rgb(38, 46, 47);
         font-size: 25px;
+
+        @media (max-width: 768px) {
+            width: 90%; /* Full width for smaller screens */
+            height: auto; /* Dynamic height */
+            padding: 20px; /* Reduce padding */
+            font-size: 20px; /* Adjust font size */
+        }
     }
-    &_haqimizda{
+
+    &_haqimizda {
         width: 50%;
         font-size: 25px;
         color: #dedddd;
         background-color: rgb(38, 46, 47);
         padding: 20px 30px 40px 30px;
         border-radius: 20px;
+
+        @media (max-width: 768px) {
+            width: 90%; /* Full width for smaller screens */
+            font-size: 20px; /* Adjust font size */
+            padding: 20px; /* Reduce padding */
+        }
     }
 }
 
-
-
-
 .image {
     border-radius: 20px;
-    width: 750px; /* Konteyner kengligi */
-    height: 620px; /* Konteyner balandligi */
-    overflow: hidden; /* Rasm konteyneridan chiqmasligi uchun */
+    width: 750px; /* Container width */
+    height: 620px; /* Container height */
+    overflow: hidden; /* Prevent overflow */
     position: relative;
-  }
-  
-  
-  .image img {
+
+    @media (max-width: 768px) {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease; /* Kattalashish animatsiyasi */
-  }
-  
-  .image:hover img {
+    transition: transform 0.3s ease; /* Zoom animation */
+}
+
+.image:hover img {
     cursor: pointer;
-    transform: scale(1.2); /* Rasm 1.2 marta kattalashadi */
-  }
+    transform: scale(1.2); /* Scale image on hover */
+}

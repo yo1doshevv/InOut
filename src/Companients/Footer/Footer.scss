@@ -1,41 +1,84 @@
-.footer{
+.footer {
     width: 100%;
     color: white;
-    background-color :rgb(3,22,29);
+    background-color: rgb(3, 22, 29);
     font-size: 18px;
     margin-top: 20vh;
-    &_wrapper{
+
+    &_wrapper {
         width: 90%;
         margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column; /* Stack elements on smaller screens */
+            align-items: flex-start; /* Align items to the start */
+        }
     }
-    &_tel{
+
+    &_tel {
         display: flex;
         gap: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column; /* Stack phone numbers vertically */
+            gap: 10px; /* Reduce gap */
+        }
     }
-    &_imgs img{
-       margin-left: 10px;
+
+    &_imgs img {
+        margin-left: 10px;
+
+        @media (max-width: 768px) {
+            width: 60px; /* Smaller size on mobile */
+            height: 60px; /* Maintain aspect ratio */
+        }
     }
-    &_ijtimoiy p{
-      position: relative;
-      left: 15px;
+
+    &_ijtimoiy p {
+        position: relative;
+        left: 15px;
+
+        @media (max-width: 768px) {
+            left: 0; /* Reset position on mobile */
+            text-align: center; /* Center text on smaller screens */
+        }
     }
-    &_loc{
+
+    &_loc {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 768px) {
+            width: 100%; /* Full width on smaller screens */
+            justify-content: center; /* Center items */
+            margin-top: 10px; /* Add space above */
+        }
     }
-    &_data{
+
+    &_data {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
         margin-right: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column; /* Stack data vertically */
+            margin-right: 0; /* Reset margin */
+        }
     }
-    &_img img{
+
+    &_img img {
         width: 80px;
         height: 80px;
+
+        @media (max-width: 768px) {
+            width: 60px; /* Smaller size on mobile */
+            height: 60px; /* Maintain aspect ratio */
+        }
     }
 }

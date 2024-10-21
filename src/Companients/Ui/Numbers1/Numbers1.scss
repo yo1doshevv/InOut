@@ -1,50 +1,113 @@
-.num{
+.num {
     width: 100%;
     color: white;
     margin-top: 100px;
     margin-bottom: 100px;
-    &_wrapper{
+
+    &_wrapper {
         width: 80%;
         margin: 0 auto;
         background-color: rgb(33, 54, 55);
         border-radius: 25px;
         padding: 30px 50px;
+
+        @media (max-width: 1200px) {
+            width: 90%;
+        }
+
+        @media (max-width: 768px) {
+            padding: 20px 30px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 15px 20px;
+        }
     }
-    &_title h1{
+
+    &_title h1 {
         font-size: 40px;
         font-weight: 600;
+
+        @media (max-width: 768px) {
+            font-size: 32px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 28px;
+        }
     }
-    &_count{
+
+    &_count {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 30px;
         font-size: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
     }
-    &_tit{
+
+    &_tit {
         margin-top: -80px;
         font-size: 25px;
         font-weight: 600;
         color: #cccccc;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
-    &_up{
+
+    &_up {
         font-weight: 900;
         font-size: 100px;
+
+        @media (max-width: 768px) {
+            font-size: 80px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 60px;
+        }
     }
-    &_countup p{
+
+    &_countup p {
         font-size: 100px;
         margin-top: -0.1px;
         margin-left: 10px;
-        font-weight:bolder;
+        font-weight: bolder;
         color: rgb(24, 125, 226);
+
+        @media (max-width: 768px) {
+            font-size: 80px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 60px;
+        }
     }
-    &_countup{
+
+    &_countup {
         display: flex;
 
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
-    &_box img{
+
+    &_box img {
         width: 180px;
         height: 150px;
         margin-top: -80px;
+
+        @media (max-width: 576px) {
+            width: 150px; /* Adjusting the image size for smaller screens */
+            height: auto; /* Maintain aspect ratio */
+        }
     }
 }
