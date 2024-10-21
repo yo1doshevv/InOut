@@ -1,7 +1,6 @@
 import React from "react";
 import "./Numbers1.scss";
 import CountUp from "react-countup";
-import AddIcon from '@mui/icons-material/Add';
 
 const Numbers1 = () => {
   return (
@@ -10,28 +9,28 @@ const Numbers1 = () => {
         <div className="num_title">
           <h1>
             Bizda{" "}
-            <span style={{ color: " rgb(24, 125, 226)" }}>Raqamlar Mavjud</span>
+            <span style={{ color: "rgb(24, 125, 226)" }}>Raqamlar Mavjud</span>
           </h1>
         </div>
         <div className="num_count">
           <div className="num_box">
             <div className="num_countup">
-              <CountUp className="num_up" start={0} end={20} duration={1} />
-              <p className="num_p">+</p >
+              <CountUp className="num_up" start={0} end={20} duration={1} once={false} />
+              <p className="num_p">+</p>
             </div>
             <p className="num_tit">xodimlar soni</p>
           </div>
           <div className="num_box">
             <div className="num_countup">
-              <CountUp className="num_up" start={0} end={1672} duration={1} />
-              <p className="num_p">+</p >
+              <CountUp className="num_up" start={0} end={1672} duration={1} once={false} />
+              <p className="num_p">+</p>
             </div>
             <p className="num_tit">reklama kampaniyalarini <br /> boshladi</p>
           </div>
           <div className="num_box">
             <div className="num_countup">
-              <CountUp className="num_up" start={0} end={1660} duration={1} />
-              <p className="num_p">+</p >
+              <CountUp className="num_up" start={0} end={1660} duration={1} once={false} />
+              <p className="num_p">+</p>
             </div>
             <p className="num_tit">muvaffaqiyatli holatlar</p>
           </div>

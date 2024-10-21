@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nimaqilolamiz.scss";
+import { NavLink } from "react-router-dom";
 
 const Nimaqilolamiz = () => {
   return (
@@ -11,7 +12,7 @@ const Nimaqilolamiz = () => {
         <div className="nima_items">
           <div className="nima_box">
             <img
-              src="https://admin.inoutads.uz/uploads/images/service/12/preview-64e685fd6e8c7.jpg"
+              src="https://admin.inoutads.uz/uploads/images/service/4/preview-64c4b901ac4a7.png"
               alt=""
             />
             <div className="nima_boxtit">
@@ -22,12 +23,12 @@ const Nimaqilolamiz = () => {
                 
               </p>
 
-              <button>Koproq</button>
+             <NavLink className="link" to="/cervices">Koproq</NavLink>
             </div>
           </div>
           <div className="nima_box">
             <img
-              src="https://admin.inoutads.uz/uploads/images/service/12/preview-64e685fd6e8c7.jpg"
+              src="https://admin.inoutads.uz/uploads/images/service/1/preview-64ddb6f13a162.jpeg"
               alt=""
             />
             <div className="nima_boxtit">
@@ -37,42 +38,10 @@ const Nimaqilolamiz = () => {
                 Saepe asperiores exercitationem <br />
                 
               </p>
-              <button>Koproq</button>
+             <NavLink className="link" to="/cervices">Koproq</NavLink>
             </div>
           </div>
-          {/* <div className="nima_box">
-            <img
-              src="https://admin.inoutads.uz/uploads/images/service/12/preview-64e685fd6e8c7.jpg"
-              alt=""
-            />
-            <div className="nima_boxtit">
-              <h1>salom dunyo</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-                Saepe asperiores exercitationem <br />
-                nihil vero amet maxime perferendis, corporis <br /> nostrum
-                obcaecati!
-              </p>
-              <button>Koproq</button>
-            </div>
-          </div>
-          <div className="nima_box">
-            <img
-              src="https://admin.inoutads.uz/uploads/images/service/12/preview-64e685fd6e8c7.jpg"
-              alt=""
-            />
-            <div className="nima_boxtit">
-              <h1>salom dunyo</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-                Saepe asperiores exercitationem <br />
-                nihil vero amet maxime perferendis, corporis <br /> nostrum
-                obcaecati!
-              </p>
-              <button>Koproq</button>
-            </div>
-          </div> */}
-          
+         
         </div>
       </div>
     </div>

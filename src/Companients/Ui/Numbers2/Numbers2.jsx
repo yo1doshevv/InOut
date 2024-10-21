@@ -1,6 +1,7 @@
 import React from "react";
 import "./Number.scss";
 import CountUp from "react-countup";
+import { NavLink } from "react-router-dom";
 
 const Numbers2 = () => {
   return (
@@ -15,7 +16,7 @@ const Numbers2 = () => {
         <div className="num1_cunter">
           <div className="num1_hed">
             <h1>Biz <span className="num1_span">Haqimizda</span></h1>
-            <button>Batafsil malumot olish</button>
+            <NavLink className="hed" to="/about">Batafsil malumot olish</NavLink>
           </div>
           <div className="num1_coup">
             <div className="num1_box">

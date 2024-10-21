@@ -23,17 +23,17 @@ const Location = () => {
           ></iframe>
         </div>
         <div className="loc_btn">
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card1" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card2" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card3" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card4" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card5" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card6" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card7" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card8" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card9" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card10" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card11" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
         </div>
       </div>
     </div>

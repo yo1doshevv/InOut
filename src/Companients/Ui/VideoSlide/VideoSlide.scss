@@ -28,10 +28,16 @@
     }
     &_title a{
         text-decoration: none;
-        background-color: rgb(74, 142, 246);
+        background-color: rgb(24, 125, 226);
         color: wheat;
         padding: 10px 20px;
         border-radius: 12px;
+    }
+    &_title a:hover{
+        cursor: pointer;
+        background-color: inherit;
+        border: 2px solid rgb(24, 125, 226);
+        color: rgb(24, 125, 226);
     }
     &_vid1 img{
         border-radius: 20px;

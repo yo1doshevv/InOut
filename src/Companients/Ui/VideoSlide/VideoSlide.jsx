@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import "./VideoSlide.scss";
+import { NavLink } from "react-router-dom";
 
 const VideoSlide = () => {
   const settings2 = {
@@ -18,7 +19,7 @@ const VideoSlide = () => {
       <div className="video_wrapper">
         <div className="video_title">
           <h1>video</h1>
-          <a href="">barcha videolar</a>
+          <NavLink to="/cervices">Barcha videolar</NavLink>
         </div>
         <div className="video_vid">
           <Slider {...settings2}>

@@ -46,7 +46,11 @@
       border-radius: 28px;
      
     }
-  
+
+    .nava{
+      text-decoration: none;
+      color: white;
+    }
     &_right img:hover {
       filter: brightness(80%);
       cursor: pointer;

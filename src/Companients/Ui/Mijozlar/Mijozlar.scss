@@ -17,6 +17,10 @@
         align-items: center;
         justify-content: space-between;
     }
+    .link{
+        text-decoration: none;
+        color: white;
+    }
     &_btn button{
         border: none;
         outline: none;
@@ -26,6 +30,12 @@
         color: white;
         font-size: 19px;
         font-weight: 600;
+    }
+    &_btn button:hover{
+        cursor: pointer;
+        background-color: inherit;
+        border: 2px solid rgb(24, 125, 226);
+        color: rgb(24, 125, 226);
     }
     &_box img{
         border-radius: 15px;

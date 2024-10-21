@@ -1,6 +1,7 @@
 import React from "react";
 import "./Reklama.scss";
 import Slider from "react-slick";
+import { NavLink } from "react-router-dom";
 
 
 const Reklama = () => {
@@ -31,7 +32,7 @@ const Reklama = () => {
                   Xizmatlarimiz bilan <br /> to'liq tanishmas <br /> ekansiz....
                 </h1>
                 <div className="reklama_btn">
-                  <button className="transparent-button">Konsultatsiya Olish</button>
+                  <button className="transparent-button"><NavLink className="nava" to="/contact">Konsultatsiya Olish</NavLink></button>
                 </div>
               </div>
             </div>

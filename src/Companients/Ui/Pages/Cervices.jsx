@@ -1,8 +1,11 @@
 import React from 'react'
+import Nimaqilolamiz from '../Nimaqilolamiz/Nimaqilolamiz'
 
 const Cervices = () => {
   return (
-    <div>Cervices</div>
+    <div>
+      <Nimaqilolamiz/>
+    </div>
   )
 }
 

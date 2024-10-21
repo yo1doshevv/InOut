@@ -1,8 +1,13 @@
 import React from 'react'
+import SHarh from '../SHarh/SHarh'
+
 
 const sharhlar = () => {
   return (
-    <div>sharhlar</div>
+    <div>
+      <SHarh/>
+
+    </div>
   )
 }
 

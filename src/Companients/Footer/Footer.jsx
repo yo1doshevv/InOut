@@ -30,8 +30,8 @@ const Footer = () => {
         <div className="footer_ijtimoiy">
           <p>Bizning Ijtimoiy Tarmoqlarimiz</p>
           <div className="footer_imgs">
-            <a href="https://admin.inoutads.uz/uploads/images/media/2/preview-64c740aa02c7d.png"><img src="/Img/telegram.png" alt="" /></a>
-            <a href="https://admin.inoutads.uz/uploads/images/media/8/preview-64c744416b525.png"><img src="/Img/whatsup.png" alt="" /></a>
+            <a href="https://t.me/inout_group"><img src="/Img/telegram.png" alt="" /></a>
+            <a href="https://www.whatsapp.com/"><img src="/Img/whatsup.png" alt="" /></a>
             <a href="https://www.facebook.com/"><img src="/Img/facebook.png" alt="" /></a>
             <a href="https://www.instagram.com/"><img src="/Img/insta.png" alt="" /></a>
             <a href="https://youtube.com"><img src="/Img/youtube.img" alt="" /></a>

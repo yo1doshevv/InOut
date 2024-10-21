@@ -1,11 +1,11 @@
 import React from "react";
 import "./Jamoa.scss";
 import Slider from "react-slick";
+import { NavLink } from "react-router-dom";
 
 const Jamoa = () => {
   const settings = {
     dots: false,
-    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -29,71 +29,103 @@ const Jamoa = () => {
             </p>
           </div>
           <div className="jamoa_right">
-            <a href="">To'liq ro'yxatni ko'ring</a>
+            <NavLink to="/sharhlar">Baholash</NavLink>
           </div>
         </div>
         <div className="jamoa_aboutus">
-          {/* <Slider {...settings} className="box">
+          <Slider {...settings} className="box">
             <div className="jamoa_cards">
-                <div className="jamoa_img">
-                  <img
-                    src="https://admin.inoutads.uz/uploads/images/team/2/preview-64c895c9f3f5a.jpg"
-                    alt="Mira"
-                  />
-                </div>
-                <h2>Mira</h2>
-                <p>Android dasturchi</p>
-                <div className="jamoa_ijt">
-                  <img src="/Img/insta.png" alt="Instagram" />
-                  <img src="/Img/telegram.png" alt="Telegram" />
-                  <img src="/Img/youtube.png" alt="YouTube" />
-                </div>
-              
-                <div className="jamoa_img">
-                  <img
-                    src="https://admin.inoutads.uz/uploads/images/team/2/preview-64c895c9f3f5a.jpg"
-                    alt="Mira"
-                  />
-                </div>
-                <h2>Mira</h2>
-                <p>Android dasturchi</p>
-                <div className="jamoa_ijt">
-                  <img src="/Img/insta.png" alt="Instagram" />
-                  <img src="/Img/telegram.png" alt="Telegram" />
-                  <img src="/Img/youtube.png" alt="YouTube" />
-                </div>
-              
-                <div className="jamoa_img">
-                  <img
-                    src="https://admin.inoutads.uz/uploads/images/team/2/preview-64c895c9f3f5a.jpg"
-                    alt="Mira"
-                  />
-                </div>
-                <h2>Mira</h2>
-                <p>Android dasturchi</p>
-                <div className="jamoa_ijt">
-                  <img src="/Img/insta.png" alt="Instagram" />
-                  <img src="/Img/telegram.png" alt="Telegram" />
-                  <img src="/Img/youtube.png" alt="YouTube" />
-                </div>
-              
-                <div className="jamoa_img">
-                  <img
-                    src="https://admin.inoutads.uz/uploads/images/team/2/preview-64c895c9f3f5a.jpg"
-                    alt="Mira"
-                  />
-                </div>
-                <h2>Mira</h2>
-                <p>Android dasturchi</p>
-                <div className="jamoa_ijt">
-                  <img src="/Img/insta.png" alt="Instagram" />
-                  <img src="/Img/telegram.png" alt="Telegram" />
-                  <img src="/Img/youtube.png" alt="YouTube" />
-              
-              </div>
-             
+              <h3 >
+                {" "}
+                <img 
+                  src="https://admin.inoutads.uz/uploads/images/team/2/preview-64c895c9f3f5a.jpg"
+                  alt="Mira"
+                />
+              </h3>
+
+              <h2>Mira</h2>
+              <p>Android dasturchi</p>
+
+              <h2>
+                {" "}
+                <img src="/Img/insta.png" alt="Instagram" />
+                <img src="/Img/telegram.png" alt="Telegram" />
+                <img src="/Img/youtube.png" alt="YouTube" />
+              </h2><br />
+              <div className="jamoa_right btn">
+           <NavLink to="/sharhlar">Baholash</NavLink>
+          </div>
             </div>
-          </Slider> */}
+            <div className="jamoa_cards">
+              <h3>
+                {" "}
+                <img
+                  src="https://admin.inoutads.uz/uploads/images/team/1/preview-6502ee5e6af53.jpg"
+                  alt="Mira"
+                />
+              </h3>
+
+              <h2>Mira</h2>
+              <p>Android dasturchi</p>
+
+              <h2>
+                {" "}
+                <img src="/Img/insta.png" alt="Instagram" />
+                <img src="/Img/telegram.png" alt="Telegram" />
+                <img src="/Img/youtube.png" alt="YouTube" />
+              </h2>
+              <br />
+              <div className="jamoa_right btn">
+            <NavLink to="/sharhlar">Baholash</NavLink>
+          </div>
+            </div>
+            <div className="jamoa_cards">
+              <h3>
+                {" "}
+                <img
+                  src="https://admin.inoutads.uz/uploads/images/team/5/preview-64c49eb20856f.png"
+                  alt="Mira"
+                />
+              </h3>
+
+              <h2>Mira</h2>
+              <p>Android dasturchi</p>
+
+              <h2>
+                {" "}
+                <img src="/Img/insta.png" alt="Instagram" />
+                <img src="/Img/telegram.png" alt="Telegram" />
+                <img src="/Img/youtube.png" alt="YouTube" />
+              </h2>
+              <br />
+              <div className="jamoa_right btn">
+            <NavLink to="/sharhlar">Baholash</NavLink>
+          </div>
+            </div>
+            <div className="jamoa_cards">
+              <h3>
+                {" "}
+                <img
+                  src="https://admin.inoutads.uz/uploads/images/team/6/preview-64c49ebfa48bb.png"
+                  alt="Mira"
+                />
+              </h3>
+
+              <h2>Mira</h2>
+              <p>Android dasturchi</p>
+
+              <h2>
+                {" "}
+                <img src="/Img/insta.png" alt="Instagram" />
+                <img src="/Img/telegram.png" alt="Telegram" />
+                <img src="/Img/youtube.png" alt="YouTube" />
+              </h2>
+              <br />
+              <div className="jamoa_right btn">
+            <NavLink to="/sharhlar">Baholash</NavLink>
+          </div>
+            </div>
+          </Slider>
         </div>
       </div>
     </div>

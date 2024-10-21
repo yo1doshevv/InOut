@@ -6,3 +6,9 @@ body{
     height: auto;
     font-family: "Amatic SC", sans-serif;
 }
+
+button:hover{
+    cursor: pointer;
+    background-color: inherit;
+    border: 1px solid inherit;
+}

@@ -8,6 +8,7 @@ import Mijozlar from '../Mijozlar/Mijozlar'
 import Numbers1 from '../Numbers1/Numbers1'
 import Numbers2 from '../Numbers2/Numbers2'
 import Jamoa from '../Jamoa/Jamoa'
+import SHarh from '../SHarh/SHarh'
 
 const Home = () => {
   return (
@@ -17,11 +18,11 @@ const Home = () => {
         <VideoSlide/>
         <Numbers1/>
         <Nimaqilolamiz/>
+        <Jamoa/>
         <Mijozlar/>
         <Conaction/>
         <Numbers2/>
-        <Jamoa/>
-
+        <SHarh/>
     </div>
   )
 }

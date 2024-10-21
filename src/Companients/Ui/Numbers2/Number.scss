@@ -43,14 +43,21 @@
         align-items: center;
         justify-content: space-between;
     }
-    &_hed button{
+    &_hed .hed{
         border: none;
         outline: none;
+        text-decoration: none;
         padding: 10px 20px;
         border-radius: 10px;
         font-size: 17px;
         background-color: rgb(50, 129, 172);
         color: white;
+    }
+    &_hed .hed:hover{
+        cursor: pointer;
+        background-color: inherit;
+        border: 2px solid rgb(24, 125, 226);
+        color: rgb(24, 125, 226);
     }
 }
 .image-container {

@@ -70,4 +70,22 @@
         height: 30px;
         border-radius: 50%;
     }
+    &_btn button{
+        background: linear-gradient(290deg, #1d72b9, #3a2b4c, #226aa4, #463353);
+        background-size: 800% 800%;
+        animation: card 8s ease-in-out infinite;
+    }
+    @keyframes card {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
 }
+
+

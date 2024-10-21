@@ -1,6 +1,7 @@
 import React from "react";
 import "./Mijozlar.scss";
 import Slider from "react-slick";
+import { NavLink } from "react-router-dom";
 
 const Mijozlar = () => {
   const settings = {
@@ -25,7 +26,7 @@ const Mijozlar = () => {
             </div>
           </div>
           <div className="mijoz_btn">
-            <button>Mijoz bolish</button>
+            <button><NavLink className="link" to="/contact">Mijoz bolish</NavLink></button>
           </div>
         </div>
         <div className="mijoz_box">

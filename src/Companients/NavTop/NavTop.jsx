@@ -3,6 +3,7 @@ import "./NavTop.scss";
 import TelegramIcon from '@mui/icons-material/Telegram';
 import TextsmsTwoToneIcon from '@mui/icons-material/TextsmsTwoTone';
 import DownloadTwoToneIcon from '@mui/icons-material/DownloadTwoTone';
+import { NavLink } from "react-router-dom";
 
 const NavTop = () => {
   return (
@@ -15,15 +16,15 @@ const NavTop = () => {
           <p>
             <TelegramIcon sx={{ color: 'white' }} />
           </p>
-          <a href="https://t.me/My_VALLEY">Telegram</a>
+          <a className="animated-gradient" href="https://t.me/My_VALLEY">Telegram</a>
           <p>
             <DownloadTwoToneIcon sx={{ color: 'white' }} />
           </p>
-          <a href="">Taqdimot(34mb)</a>
+          <a className="animated-gradient" href="">Taqdimot(34mb)</a>
           <p>
             <TextsmsTwoToneIcon sx={{ color: 'white' }} />
           </p>
-          <a href="">Arizangizni Yuboring</a>
+         <NavLink className="animated-gradient" to="/contact">Arizangizni Yuboring</NavLink>
         </div>
         <div className="navtop_language">
           <div className="navtop_uz">

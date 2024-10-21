@@ -1,0 +1,36 @@
+.more{
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    margin-top: 50px;
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+    &_cards{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_card1{
+        width: 400px;
+        padding: 10px 20px 20px 20px;
+        border-radius: 15px;
+        background-color: rgb(53, 67, 65);
+    }
+    &_card1 button{
+        border: none;
+        outline: none;
+        color: white;
+        background-color: rgb(84, 156, 215);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    &_card1 button:hover{
+        background-color: rgb(53, 67, 65);
+        color: white;
+        cursor: pointer;
+        border: 1px solid  rgb(84, 156, 215);
+    }
+}

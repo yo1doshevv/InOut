@@ -1,0 +1,71 @@
+.haqi{
+    width: 100%;
+    color: #ffffff;
+    margin-top: 100px;
+    &_wrapper{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+    &_btn a{
+        text-decoration: none;
+        color: red;
+        font-size: 18px;
+    }
+    &_btn{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: -200px;
+        position: relative;
+        top: 40px;
+    }
+    &_btn a:hover{
+        font-size: 19px;
+    }
+    &_count{
+        width: 50%;
+        height: 535px;
+        padding: 30px 30px 60px 30px;
+        border-radius: 20px;
+        background-color: rgb(38, 46, 47);
+        font-size: 25px;
+    }
+    &_haqimizda{
+        width: 50%;
+        font-size: 25px;
+        color: #dedddd;
+        background-color: rgb(38, 46, 47);
+        padding: 20px 30px 40px 30px;
+        border-radius: 20px;
+    }
+}
+
+
+
+
+.image {
+    border-radius: 20px;
+    width: 750px; /* Konteyner kengligi */
+    height: 620px; /* Konteyner balandligi */
+    overflow: hidden; /* Rasm konteyneridan chiqmasligi uchun */
+    position: relative;
+  }
+  
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Kattalashish animatsiyasi */
+  }
+  
+  .image:hover img {
+    cursor: pointer;
+    transform: scale(1.2); /* Rasm 1.2 marta kattalashadi */
+  }

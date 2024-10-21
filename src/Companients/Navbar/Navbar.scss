@@ -72,11 +72,14 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: wheat;
+        color: rgb(255, 255, 255);
         position: relative;
         top: 10px;
-        font-weight: 900;
-        font-size: 17px;
+        font-weight: 600;
+        font-size: 17.5px;
+    }
+    &_time:hover{
+        cursor: pointer;
     }
     &_tel{
         display: flex;
@@ -87,6 +90,9 @@
         top: -6px;
         font-weight: 700;
         font-size: 17px;
+    }
+    &_tel:hover{
+        cursor: pointer;
     }
     &_darli{
         margin-right: 20px;
@@ -100,5 +106,8 @@
         padding: 8px 10px;
         background-color: rgb(118, 116, 116);
         outline: none;
+    }
+    &_darli button:hover{
+        cursor: pointer;
     }
 }
