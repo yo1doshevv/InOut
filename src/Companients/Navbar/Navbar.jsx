@@ -78,7 +78,7 @@ const Navbar = () => {
             <p>9:00-17:00 du-ju</p>
           </div>
           <div className="navbar_tel">
-            <LocalPhoneTwoToneIcon sx={{ color: 'rgb(206, 206, 206)' }}/>
+            <LocalPhoneTwoToneIcon sx={{ color: 'rgb(206, 206, 206)',  }}/>
             <p>+998 55 201 90 10</p>
           </div>
         </div>

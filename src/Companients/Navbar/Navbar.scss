@@ -24,7 +24,6 @@
       }
   
       @media (max-width: 480px) {
-        flex-direction: column; /* Stack links vertically on mobile */
         gap: 10px;
       }
     }
@@ -41,7 +40,7 @@
       }
   
       @media (max-width: 480px) {
-        font-size: 16px; /* Reduce text size on smaller screens */
+        font-size: 10px; /* Reduce text size on smaller screens */
       }
     }
   
@@ -59,6 +58,7 @@
         flex-direction: column; /* Stack input elements vertically on mobile */
         align-items: flex-start;
         padding: 10px 0;
+        margin-top: -50px !important;
       }
     }
     &_input p{
@@ -66,6 +66,12 @@
         left: 35px;
         top: 1px;
         z-index: 6;
+
+        @media (max-width: 480px) {
+         position: relative;
+         left: 185px;
+         top: 50px;
+        }
     }
   
     &_input input {
@@ -94,7 +100,8 @@
       font-size: 17.5px;
   
       @media (max-width: 480px) {
-        font-size: 16px; /* Adjust text size on smaller screens */
+        margin-top: -20px !important;
+        font-size: 10px; /* Adjust text size on smaller screens */
       }
     }
   
@@ -132,8 +139,7 @@
       }
   
       @media (max-width: 480px) {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        gap: 10px;
+       display: none;
       }
     }
   
@@ -147,6 +153,8 @@
       &:hover {
         cursor: pointer;
       }
+
+    
     }
   
     @keyframes float {
