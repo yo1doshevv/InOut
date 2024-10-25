@@ -2,7 +2,6 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color :rgb(6, 29, 37);
     height: auto;
     font-family: "Amatic SC", sans-serif;
 }
@@ -12,3 +11,29 @@ button:hover{
     background-color: inherit;
     border: 1px solid inherit;
 }
+
+.AppBtn button{
+    border-radius: 10px;
+    border: none;
+    padding: 8px 10px;
+    outline: none;
+    display: flex;
+   position: absolute;
+   z-index: 999;
+   left: 1350px;
+  top: 128px;
+  background-color: rgb(41, 54, 56);
+  color: white;
+  }
+
+.light-mode {
+    background-color: rgb(10, 24, 28) ;
+    color: rgb(255, 255, 255) ;
+
+  }
+  
+  .dark-mode {
+    background-color: rgb(238, 225, 254) ;
+    color: rgb(0, 0, 0) !important;
+  }
+  

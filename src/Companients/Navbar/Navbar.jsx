@@ -6,13 +6,37 @@ import LocalPhoneTwoToneIcon from "@mui/icons-material/LocalPhoneTwoTone";
 import WbSunnyTwoToneIcon from "@mui/icons-material/WbSunnyTwoTone";
 import FavoriteBorderTwoToneIcon from "@mui/icons-material/FavoriteBorderTwoTone";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
+import NightlightIcon from '@mui/icons-material/Nightlight';
+
 import Typed from 'typed.js';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const typedElement = useRef(null); 
   const typedInstance = useRef(null); 
   const [inputValue, setInputValue] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+
+  const { t, i18n } = useTranslation(); // Tarjima funksiyasini olish
+  const [language, setLan] = useState("");
+
+  const handleLan = (e) => {
+    const selectedLanguage = e.target.value;
+    setLan(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage); // i18next da tilni o'zgartirish
+  }
+
+  // Toggle function
+  const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
+  };
+
+  useEffect(() => {
+    console.log(language); // Til o'zgarishini kuzatish
+  }, [language]);
+
 
   useEffect(() => {
     typedInstance.current = new Typed(typedElement.current, {
@@ -51,14 +75,15 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
+      <div>
       <div className="navbar_wrapper">
         <div className="navbar_nav">
-          <NavLink to="/">Asosiy</NavLink>
-          <NavLink to="/cervices">Xizmatlar</NavLink>
-          <NavLink to="/about">Biz Haqimizda</NavLink>
-          <NavLink to="/contact">Aloqa</NavLink>
-          <NavLink to="/vakansiya">Vakansiya</NavLink>
-          <NavLink to="/sharhlar">Sharhlar</NavLink>
+          <NavLink to="/">{t("asosiy")}</NavLink>
+          <NavLink to="/cervices">{t("xizmatlar")}</NavLink>
+          <NavLink to="/about">{t("haqimizda")}</NavLink>
+          <NavLink to="/contact">{t("aloqa")}</NavLink>
+          <NavLink to="/vakansiya">{t("vakansiya")}</NavLink>
+          <NavLink to="/sharhlar">{t("sharhlar")}</NavLink>
         </div>
         <div className="navbar_input">
           <p><SearchTwoToneIcon sx={{ color: 'white' }}/></p>
@@ -83,13 +108,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar_darli">
-          <button>
-            <WbSunnyTwoToneIcon sx={{color: 'rgb(255, 255, 255)'}}/>
-          </button>
-          <button>
-            <FavoriteBorderTwoToneIcon sx={{color: 'rgb(255, 255, 255)'}}/>
-          </button>
+        
+         
         </div>
+      </div>
       </div>
     </div>
   );

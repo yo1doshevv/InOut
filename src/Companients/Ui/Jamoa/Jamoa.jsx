@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Jamoa.scss";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Jamoa = () => {
+
+  const typedElement = useRef(null); 
+  const typedInstance = useRef(null); 
+  const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const { t, i18n } = useTranslation(); // Tarjima funksiyasini olish
+  const [language, setLan] = useState("");
+
+  const handleLan = (e) => {
+    const selectedLanguage = e.target.value;
+    setLan(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage); // i18next da tilni o'zgartirish
+  }
+
+  useEffect(() => {
+    console.log(language); // Til o'zgarishini kuzatish
+  }, [language]);
   const settings = {
     dots: false,
     infinite: true,
@@ -19,17 +38,17 @@ const Jamoa = () => {
         <div className="jamoa_title">
           <div className="jamoa_left">
             <h1>
-              Bizning <span style={{ color: "#3c88e5" }}>Jamoamiz</span>
+              {t("bizning")} <span style={{ color: "#3c88e5" }}>{t("jamo")}</span>
             </h1>
             <p>
-              Bu sizning buyurtmangizni bajaradigan jamoa{" "}
-              <span style={{ color: "#3c88e5" }}>sifatli</span>,{" "}
-              <span style={{ color: "#3c88e5" }}>ishonchli</span> va{" "}
-              <span style={{ color: "#3c88e5" }}>xavfsiz</span>
+             {t("text")}{" "}
+              <span style={{ color: "#3c88e5" }}>{t("sifat")}</span>,{" "}
+              <span style={{ color: "#3c88e5" }}>{t("ishonch")}</span> {t("va")}{" "}
+              <span style={{ color: "#3c88e5" }}>{t("xavfsiz")}</span>
             </p>
           </div>
           <div className="jamoa_right">
-            <NavLink to="/sharhlar">Baholash</NavLink>
+            <NavLink to="/sharhlar">{t("baholash")}</NavLink>
           </div>
         </div>
         <div className="jamoa_aboutus">
@@ -44,7 +63,7 @@ const Jamoa = () => {
               </h3>
 
               <h2>Mira</h2>
-              <p>Android dasturchi</p>
+              <p>{t("dasturchi")}</p>
 
               <h2>
                 {" "}
@@ -53,7 +72,7 @@ const Jamoa = () => {
                 <img src="/Img/youtube.png" alt="YouTube" />
               </h2><br />
               <div className="jamoa_right btn">
-           <NavLink to="/sharhlar">Baholash</NavLink>
+           <NavLink to="/sharhlar">{t("baholash")}</NavLink>
           </div>
             </div>
             <div className="jamoa_cards">
@@ -76,7 +95,7 @@ const Jamoa = () => {
               </h2>
               <br />
               <div className="jamoa_right btn">
-            <NavLink to="/sharhlar">Baholash</NavLink>
+            <NavLink to="/sharhlar">{t("baholash")}</NavLink>
           </div>
             </div>
             <div className="jamoa_cards">
@@ -99,7 +118,7 @@ const Jamoa = () => {
               </h2>
               <br />
               <div className="jamoa_right btn">
-            <NavLink to="/sharhlar">Baholash</NavLink>
+            <NavLink to="/sharhlar">{t("baholash")}</NavLink>
           </div>
             </div>
             <div className="jamoa_cards">
@@ -122,7 +141,7 @@ const Jamoa = () => {
               </h2>
               <br />
               <div className="jamoa_right btn">
-            <NavLink to="/sharhlar">Baholash</NavLink>
+            <NavLink to="/sharhlar">{t("baholash")}</NavLink>
           </div>
             </div>
           </Slider>

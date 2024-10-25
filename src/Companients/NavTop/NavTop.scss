@@ -13,13 +13,27 @@
   
     &_language {
       width: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      border: none;
+      background-color:  rgb(3, 22, 29);
       color: white;
-      position: relative;
-      top: 15px;
+      // position: relative;
+      // top: 15px;
       font-weight: 600;
+
+      @media (max-width: 480px) {
+        margin-left: 90px !important;
+      }
+    }
+    &_language select{
+      width: 50px;
+      background-color:  rgb(3, 22, 29);
+      outline: none;
+      color: white;
+      border: none;
+    }
+    &_language option{
+      border: none;
+      outline: none;
     }
   
     &_language:hover {

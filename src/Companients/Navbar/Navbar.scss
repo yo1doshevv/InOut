@@ -4,6 +4,7 @@
     position: sticky;
     top: 0;
     z-index: 3;
+    // margin-top: -40px;
   
     &_wrapper {
       width: 90%;
@@ -127,7 +128,33 @@
     &_tel:hover {
       cursor: pointer;
     }
-  
+
+
+
+
+/* Tugma dizayni */
+.toggle-button {
+  padding: 12px 17px; /* Tugma ichidagi bo'sh joy */
+  border: none; /* Chegarani olib tashlash */
+  border-radius: 5px; /* Burchaklarni yumshatish */
+  cursor: pointer; /* Ko'rsatgichni ko'rsatish */
+  font-size: 9px; /* Matn o'lchami */
+  background-color: inherit; /* Tugma rangi */
+  color: white; /* Tugma matni rangi */
+  position: relative; /* Absolute pozitsiyani sozlash */
+  overflow: hidden; /* O'tgan elementlarni olib tashlash */
+  transition: background-color 0.3s, transform 0.3s; /* Ranglar va transformatsiya uchun animatsiya */
+}
+
+.toggle-button.active {
+  background-color: #6c757d; /* Dark mode tugma rangi */
+}
+
+
+.toggle-button:hover {
+  transform: translateY(-3px); /* Tugma yuqoriga ko'tariladi */
+}
+
     &_darli {
       margin-right: 20px;
       display: flex;

@@ -105,6 +105,7 @@
         color: white;
         font-size: 18px;
         margin-left: 330px;
+        box-sizing: border-box;
         margin-top: 25px;
 
         @media (max-width: 768px) {
@@ -116,8 +117,7 @@
 
     &_btn:hover {
         cursor: pointer;
-        background-color: inherit;
-        border: 0.1px solid rgb(24, 125, 226);
-        color: rgb(24, 125, 226);
+        background-color: rgb(24, 125, 226);
+        color: rgb(0, 0, 0);
     }
 }

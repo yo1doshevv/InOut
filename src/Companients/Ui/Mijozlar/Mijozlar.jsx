@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Mijozlar.scss";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
 
 const Mijozlar = () => {
+
+  const typedElement = useRef(null); 
+  const typedInstance = useRef(null); 
+  const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const { t, i18n } = useTranslation(); // Tarjima funksiyasini olish
+  const [language, setLan] = useState("");
+
+  const handleLan = (e) => {
+    const selectedLanguage = e.target.value;
+    setLan(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage); // i18next da tilni o'zgartirish
+  }
+
   const settings = {
     dots: false,
     arrows: false,
@@ -20,13 +37,13 @@ const Mijozlar = () => {
       <div className="mijoz_wrapper">
         <div className="mijoz_heder">
           <div className="mijoz_title">
-            <h1>Ishonchli mijozlar</h1>
+            <h1>{t("ishonchli")}</h1>
             <div className="mijoz_text">
-              <p>Davom etilmoqda... Sizning logoingiz uchun ham joy mavjud</p>
+              <p>{t("logo")}</p>
             </div>
           </div>
           <div className="mijoz_btn">
-            <button><NavLink className="link" to="/contact">Mijoz bolish</NavLink></button>
+            <button><NavLink className="link" to="/contact">{t("mijoz")}</NavLink></button>
           </div>
         </div>
         <div className="mijoz_box">

@@ -16,6 +16,13 @@
     justify-content: space-between;
     gap: 50px;
 
+    &_title h1{
+      @media (max-width: 480px) {
+        font-size: 10px !important;
+  
+      }
+    }
+
     @media (max-width: 1024px) {
       flex-direction: column;
       gap: 30px;
@@ -30,6 +37,7 @@
     @media (max-width: 480px) {
       gap: 20px; /* Reduce gap for mobile devices */
       margin-top: -100px; /* Adjust margin for mobile */
+
     }
   }
   .nava{
@@ -126,6 +134,7 @@
 .transparent-button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 .slic img {
   overflow: hidden;

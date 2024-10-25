@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Location.scss";
 import { blue } from "@mui/material/colors";
+import { useTranslation } from 'react-i18next';
 
 const Location = () => {
+  const typedElement = useRef(null); 
+  const typedInstance = useRef(null); 
+  const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const { t, i18n } = useTranslation(); // Tarjima funksiyasini olish
+  const [language, setLan] = useState("");
+
+  const handleLan = (e) => {
+    const selectedLanguage = e.target.value;
+    setLan(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage); // i18next da tilni o'zgartirish
+  }
+
+  useEffect(() => {
+    console.log(language); // Til o'zgarishini kuzatish
+  }, [language]);
   return (
     <div className="loc">
+      <div></div>
       <div className="loc_wrapper">
         <div className="loc_title">
           <h1>
-            Sizning reklamangiz uchun
-            <span className="loc_span" style={{color: blue}}> joylar</span>...
+           {t("local")}
+            <span className="loc_span" style={{color: blue}}> {t("joy")}</span>...
           </h1>
         </div>
         <div className="loc_location">
@@ -23,17 +42,17 @@ const Location = () => {
           ></iframe>
         </div>
         <div className="loc_btn">
-          <button><img className="card1" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card2" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card3" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card4" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card5" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card6" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card7" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card8" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card9" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card10" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
-          <button><img className="card11" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />Barcha afishalar</button>
+          <button><img className="card1" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card2" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card3" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card4" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card5" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card6" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card7" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card8" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card9" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png"  alt="" />{t("btn")}</button>
+          <button><img className="card10" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />{t("btn")}</button>
+          <button><img className="card11" src="https://admin.inoutads.uz/uploads/images/category-map/8/64c49dd3547d2.png" alt="" />{t("btn")}</button>
         </div>
       </div>
     </div>

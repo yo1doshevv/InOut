@@ -14,11 +14,14 @@
     }
     &_card1{
         width: 400px;
-        padding: 10px 20px 20px 20px;
+        padding: 10px 20px 40px 20px;
         border-radius: 15px;
         background-color: rgb(53, 67, 65);
     }
-    &_card1 button{
+    &_card1 p{
+        margin-bottom: 30px;
+    }
+    &_card1 .link{
         border: none;
         outline: none;
         color: white;
@@ -26,11 +29,12 @@
         padding: 10px 20px;
         border-radius: 10px;
         font-size: 20px;
+        text-decoration: none;
+        margin-top: 10px !important;
     }
-    &_card1 button:hover{
-        background-color: rgb(53, 67, 65);
+    &_card1 .link:hover{
+        background-color: rgb(162, 187, 207);
         color: white;
         cursor: pointer;
-        border: 1px solid  rgb(84, 156, 215);
     }
 }

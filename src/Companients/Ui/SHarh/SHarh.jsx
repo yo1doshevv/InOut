@@ -1,11 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./SHarh.scss";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import Rating from "@mui/material/Rating";
 import Slider from "react-slick";
 import CloseIcon from "@mui/icons-material/Close";
+import { useTranslation } from 'react-i18next';
+
 
 const SHarh = () => {
+
+  const typedElement = useRef(null); 
+  const typedInstance = useRef(null); 
+  const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const { t, i18n } = useTranslation(); // Tarjima funksiyasini olish
+  const [language, setLan] = useState("");
+
+  const handleLan = (e) => {
+    const selectedLanguage = e.target.value;
+    setLan(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage); // i18next da tilni o'zgartirish
+  }
+
+  useEffect(() => {
+    console.log(language); // Til o'zgarishini kuzatish
+  }, [language]);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [number, setNumber] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
   const [value, setValue] = useState(0);
 
   const settings = {
@@ -70,11 +95,11 @@ const SHarh = () => {
       <div className="sharh_wrapper">
         <div className="sharh_title">
           <h1>
-            <span style={{ color: "#1361fe" }}>Sharhlar </span> Biz haqimizda
+            <span style={{ color: "#1361fe" }}>{t("sharhlar")} </span>{t("xaqimizda")}
           </h1>
           <button onClick={openModal} className="open-modal-button">
             <ChatBubbleOutlineIcon style={{ fontSize: 20, color: "white" }} />
-            Sharh Yozish
+           {t("sharh")}
           </button>
         </div>
         <Slider {...settings} className="sharh_cards">
@@ -117,7 +142,7 @@ const SHarh = () => {
         <div className="modal-overlay">
           <div className="modal-content">
             <div className="modal-header">
-              <h2>Sharh Yozish</h2>
+              <h2> {t("sharh")}</h2>
               <button onClick={closeModal} className="close-modal-button">
                 <CloseIcon />
               </button>
@@ -139,13 +164,13 @@ const SHarh = () => {
                 }}
               />
               <textarea
-                placeholder="Sharhingizni bu yerga yozing..."
+                placeholder={t("sharhyozish")}
                 value={reviewText}
                 onChange={handleReviewChange}
                 className="review-textarea"
               ></textarea>
               <button onClick={submitReview} className="submit-review-button">
-                Sharhni Yuborish
+              {t("yuborsh")}
               </button>
             </div>
           </div>

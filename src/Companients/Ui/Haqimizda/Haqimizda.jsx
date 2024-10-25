@@ -1,56 +1,71 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Haqimizda.scss";
 import CountUp from "react-countup";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Haqimizda = () => {
+  const typedElement = useRef(null);
+  const typedInstance = useRef(null);
+  const [inputValue, setInputValue] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+
+  const { t, i18n } = useTranslation(); // Tarjima funksiyasini olish
+  const [language, setLan] = useState("");
+
+  const handleLan = (e) => {
+    const selectedLanguage = e.target.value;
+    setLan(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage); // i18next da tilni o'zgartirish
+  };
+
+  useEffect(() => {
+
+    console.log(language); // Til o'zgarishini kuzatish
+  }, [language]);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const [value, setValue] = useState(0);
   return (
     <div className="haqi">
       <div className="haqi_wrapper">
         <div className="haqi_img">
           <div className="haqi_btn">
-            <NavLink to="/">Orqaga</NavLink>
+            <NavLink to="/">{t("orqaga")}</NavLink>
             <LogoutIcon sx={{ color: "red", fontSize: 30 }} />
           </div>
-         
+
           <div class="image">
             <img
               src="https://admin.inoutads.uz/uploads/images/banner/1/64c4b7fa506b5.png"
               alt=""
             />
           </div>
-          
         </div>
         <div className="haqi_haqimizda">
           <div className="haqi_title">
             <h1>
-              Biz <span className="num1_span">Haqimizda</span>
+            {t("biz")} <span className="num1_span">{t("haqimizda")}</span>
             </h1>
           </div>
           <div className="haqi_text">
             <p>
-              InOut reklama joylashtirish xizmatlarining keng assortimentini
-              taklif etadi, eng ko'p talab qilinadigani Toshkentdagi tashqi
-              reklamadir. Siz buyurtma berishingiz va reklamalarni LED
-              ekranlarga, shuningdek, laytboks va bannerlarga joylashtirishingiz
-              mumkin. Reklama imkon qadar tezroq, kafolatli va hamyonbop narxda
-              amalga oshiriladi. ANIQ FOYDA Tashqi reklama maqsadli auditoriyani
-              kerakli ma'lumotlar bilan ta'minlashning arzon va juda samarali
-              usulidir. Dastlabki ma'lumotlarni taqdim etish uchun tashrif
-              qog'ozidan foydalanish maqsadli auditoriyangizning e'tiborini jalb
-              qilish imkonini beradi. LED ekranlardan tashqi reklama sifatida
-              foydalanish eng istiqbolli formatlardan biri bo'lib, ayni paytda
-              o'z tovarlarini (xizmatlarini) reklama qiluvchi kompaniya yoki
-              tashkilotning yuqori maqomini ko'rsatadi.
+             {t("haqimiz")}
             </p>
           </div>
         </div>
         <div className="haqi_count">
-          <div className="num1_hed">
+        <div className="num1_hed">
             <h1>
-              Biz <span className="num1_span">Haqimizda</span>
+              {t("biz")} <span className="num1_span">{t("haqimizda")}</span>
             </h1>
+            <NavLink className="hed" to="/about">
+              {t("batafsil")}
+            </NavLink>
           </div>
           <div className="num1_coup">
             <div className="num1_box">
@@ -59,8 +74,8 @@ const Haqimizda = () => {
                 <CountUp start={0} end={3} duration={2} />
                 <span style={{ color: "#1877dd" }}>+</span>
               </h1>
-              <p>Xodimlar</p>
-              <p>Bizning kompaniyamizda ishlash</p>
+              <p>{t("xodimlar")}</p>
+              <p>{t("3+")}</p>
             </div>
             <div className="num1_box">
               <h1>
@@ -68,8 +83,8 @@ const Haqimizda = () => {
                 <CountUp start={0} end={24} duration={2} />
                 <span style={{ color: "#1877dd" }}>+</span>
               </h1>
-              <p>Jamiyatlar</p>
-              <p>Ijtimoiy tarmoqlarda targ'ib qilingan</p>
+              <p>{t("jamiyatlar")}</p>
+              <p>{t("24+")}</p>
             </div>
             <div className="num1_box">
               <h1>
@@ -77,8 +92,8 @@ const Haqimizda = () => {
                 <CountUp start={0} end={138} duration={2} />
                 <span style={{ color: "#1877dd" }}>+</span>
               </h1>
-              <p>Sayt</p>
-              <p>Ishlab chiqilgan va ishga tushirilgan</p>
+              <p>{t("sayt")}</p>
+              <p>{t("138")}</p>
             </div>
             <div className="num1_box">
               <h1>
@@ -86,8 +101,8 @@ const Haqimizda = () => {
                 <CountUp start={0} end={338} duration={2} />
                 <span style={{ color: "#1877dd" }}>+</span>
               </h1>
-              <p>Jamiyatlar</p>
-              <p>Ijtimoiy tarmoqlarda targ'ib </p>
+              <p>{t("jamiyatlar")}</p>
+              <p>{t("338")} </p>
             </div>
             <div className="num1_box">
               <h1>
@@ -95,8 +110,8 @@ const Haqimizda = () => {
                 <CountUp start={0} end={53} duration={2} />
                 <span style={{ color: "#1877dd" }}>+</span>
               </h1>
-              <p>grafana</p>
-              <p>grafanadagi mahsulotlar</p>
+              <p>{t("grafana")}</p>
+              <p>{t("53")}</p>
             </div>
             <div className="num1_box">
               <h1>
@@ -104,8 +119,8 @@ const Haqimizda = () => {
                 <CountUp start={0} end={218} duration={2} />
                 <span style={{ color: "#1877dd" }}>+</span>
               </h1>
-              <p>Yil</p>
-              <p>Muvaffaqiyatli jamoaviy ish</p>
+              <p>{t("yil")}</p>
+              <p>{t("218")}</p>
             </div>
           </div>
         </div>

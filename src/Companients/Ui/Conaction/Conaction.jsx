@@ -1,9 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Conaction.scss';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next';
+
 
 const Conaction = () => {
+
+  const typedElement = useRef(null); 
+  const typedInstance = useRef(null); 
+  const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const { t, i18n } = useTranslation(); // Tarjima funksiyasini olish
+  const [language, setLan] = useState("");
+
+  const handleLan = (e) => {
+    const selectedLanguage = e.target.value;
+    setLan(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage); // i18next da tilni o'zgartirish
+  }
+
+  useEffect(() => {
+    console.log(language); // Til o'zgarishini kuzatish
+  }, [language]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
@@ -77,25 +97,25 @@ const Conaction = () => {
     <div className='con'>
       <div className='con_wrapper'>
         <div className='con_left'>
-          <h1>Bizga qanday savolingiz bor?</h1>
+          <h1>{t("savol")}</h1>
           <form className='con_form' onSubmit={handleSubmit}>
-            <label htmlFor='ism'>Ism</label>
+            <label htmlFor='ism'>{t("ism")}</label>
             <input
               type='text'
               id='ism'
-              placeholder='Ismingizni kiriting'
+              placeholder={t("ismkrt")}
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <label htmlFor='email'>Elektron pochta yoki Telegram</label>
+            <label htmlFor='email'>{t("pochta")}</label>
             <input
               type='text'
               id='email'
-              placeholder='Elektron pochta yoki Telegram'
+              placeholder={t("pochta")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor='number'>Telefon raqam</label>
+            <label htmlFor='number'>{t("raqam")}</label>
             <input
               type='text'
               id='number'
@@ -103,17 +123,17 @@ const Conaction = () => {
               value={number}
               onChange={(e) => setNumber(e.target.value)}
             />
-            <label htmlFor='texta'>Sizning xabaringiz</label>
+            <label htmlFor='texta'>{t("xabar")}</label>
             <textarea
               className='con_textarea'
               name='text'
               id='texta'
-              placeholder='Sizning xabaringiz'
+              placeholder={t("xabarkrt")}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <button type='submit' className='con_btn'>
-              Yuborish
+             {t("yuborsh")}
             </button>
           </form>
           <div className='con_right'>
